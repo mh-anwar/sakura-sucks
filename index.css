@@ -9,9 +9,17 @@ header {
 .main-box {
   display: flex;
   flex-direction: row;
+  /*Change flex-direction if mobile*/
   flex-wrap: wrap;
+  gap: 5%;
 }
 
 .sakura-stats {
   display: flex;
+  flex-direction: row;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
 }
