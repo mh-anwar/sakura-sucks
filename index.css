@@ -1,10 +1,36 @@
-html,
 body {
   width: 100%;
+  background-color: #babaf1;
 }
-
+.dark-mode {
+  background-color: #480468;
+  color: white;
+}
+a {
+  color: inherit;
+}
+button {
+  height: 5%;
+  border: 1px;
+  border-radius: 0.3em;
+}
 header {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.main-info {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  gap: 1%;
+}
+.main-controls {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .main-box {
   display: flex;
@@ -14,7 +40,7 @@ header {
   gap: 5%;
 }
 
-.sakura-stats {
+.character {
   display: flex;
   flex-direction: row;
 }
