@@ -1,0 +1,17 @@
+html,
+body {
+  width: 100%;
+}
+
+header {
+  width: 100%;
+}
+.main-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.sakura-stats {
+  display: flex;
+}
