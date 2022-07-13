@@ -1,0 +1,18 @@
+{
+  "naruto": {
+    "ninjutsu": 4,
+    "taijutsu": 3.5,
+    "genjutsu": 2,
+    "intelligence": 3,
+    "strength": 3.5,
+    "speed": 3.5,
+    "stamina": 5,
+    "hand_seals": 1.5
+  },
+  "sakura": {
+    "ninjutsu": 3
+  },
+  "sasuke": {
+    "ninjutsu": 5
+  }
+}
