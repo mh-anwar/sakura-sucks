@@ -20,6 +20,7 @@ img {
 }
 button {
   height: 5%;
+  padding: 0.3em;
   border: 1px;
   border-radius: 0.3em;
 }
@@ -52,9 +53,12 @@ header {
 }
 
 .secondary-box {
+  display: flex;
   margin: 1%;
   flex: 48%;
   height: 100%;
+  align-items: center;
+  flex-direction: row;
 }
 
 .character {
@@ -86,7 +90,7 @@ header {
 }
 /* Position the "next button" to the right */
 .next {
-  position: absolute;
+  position: fixed;
   right: 0;
   border-radius: 3px 0 0 3px;
 }

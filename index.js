@@ -5,11 +5,11 @@ let darkMode = 0;
 function setDarkMode() {
   if (darkMode == 0) {
     document.body.classList.add('dark-mode');
-    mode_toggle.textContent = 'Disable Dark Mode';
+    mode_toggle.textContent = 'Enable Wight Mode';
     darkMode = 1;
   } else {
     document.body.classList.remove('dark-mode');
-    mode_toggle.textContent = 'Enable Wight Mode';
+    mode_toggle.textContent = 'Join the Akatsuki';
     darkMode = 0;
   }
 }
@@ -83,4 +83,16 @@ document.getElementById('next_slide').addEventListener('click', () => {
 document.getElementById('prev_slide').addEventListener('click', () => {
   plusSlides(-1);
 });
+
+var txt = 'Welcome! This website has 3 Easter Eggs! Try and find them!';
+var speed = 50;
+let i = 0;
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById('welcome').innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
 populate_stats();
+typeWriter();
