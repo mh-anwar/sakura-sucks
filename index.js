@@ -17,12 +17,13 @@ if (agent.includes('Safari')) {
 function setMode() {
   if (mode == 0) {
     document.body.style.backgroundImage = 'url(./images/akatsuki.jpg)';
-
-    mode_toggle.typeWriterTextContent = 'Enable Wight Mode';
+    displayAkatsukiMessage(`Hi, my name is Tobi!`);
+    mode_toggle.textContent = 'Enable Wight Mode';
     mode = 1;
   } else {
     document.body.style.backgroundImage = '';
-    mode_toggle.typeWriterTextContent = 'Join the Akatsuki';
+    displayAkatsukiMessage(`Leaving so soon??`);
+    mode_toggle.textContent = 'Join the Akatsuki';
     mode = 0;
   }
 }
@@ -88,6 +89,9 @@ function showSlides(n) {
 
 function typeWriter() {
   var speed = 50;
+  if (twCounter == 0) {
+    typeWriterElement.innerHTML = '';
+  }
   if (twCounter < typeWriterText.length) {
     typeWriterElement.innerHTML += typeWriterText.charAt(twCounter);
     twCounter++;
@@ -101,10 +105,10 @@ function displayBattleStrategy() {
   typeWriterElement = document.getElementById('battle_strategy');
   typeWriter();
 }
-function displayAkatsukiMessage() {
+function displayAkatsukiMessage(message) {
   twCounter = 0;
-  typeWriterText = `Hi, my name is Tobi`;
-  typeWriterElement = document.getElementById('battle_strategy');
+  typeWriterText = message;
+  typeWriterElement = document.getElementById('akatsuki_message');
   typeWriter();
 }
 function sakuraSurprise() {
@@ -114,7 +118,7 @@ function sakuraSurprise() {
   document.body.prepend(box);
 
   displayBattleStrategy();
-  let rand_num = Math.floor(Math.random() * 6 + 1);
+  let rand_num = Math.floor(Math.random() * 8 + 1);
   box.style.backgroundImage = 'url(./images/sakura-me/' + rand_num + '.jpeg)';
   moveSakura();
 }
