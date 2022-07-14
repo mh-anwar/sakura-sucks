@@ -1,20 +1,31 @@
 let mode_toggle = document.getElementById('mode');
 let character_boxes = document.getElementsByClassName('character');
-let darkMode = 0;
-
-function setDarkMode() {
-  if (darkMode == 0) {
-    document.body.classList.add('dark-mode');
-    mode_toggle.textContent = 'Enable Wight Mode';
-    darkMode = 1;
-  } else {
-    document.body.classList.remove('dark-mode');
-    mode_toggle.textContent = 'Join the Akatsuki';
-    darkMode = 0;
-  }
+let surprise = document.getElementById('sakura_surprise');
+let mode = 0;
+let slideIndex = 1;
+var twCounter = 0;
+var typeWriterText =
+  'Welcome! This website compares Sakura to other characters in Naruto (Shippuden). It also has a few Easter Eggs! Try and find them!';
+var typeWriterElement = document.getElementById('welcome');
+let agent = navigator.userAgent;
+if (agent.includes('Safari')) {
+  alert(
+    "Why...why are you using Safari. Anyway, this website doesn't work well with this horrible browser, so you may want to switch."
+  );
 }
 
-mode_toggle.addEventListener('click', setDarkMode);
+function setMode() {
+  if (mode == 0) {
+    document.body.style.backgroundImage = 'url(./images/akatsuki.jpg)';
+
+    mode_toggle.typeWriterTextContent = 'Enable Wight Mode';
+    mode = 1;
+  } else {
+    document.body.style.backgroundImage = '';
+    mode_toggle.typeWriterTextContent = 'Join the Akatsuki';
+    mode = 0;
+  }
+}
 
 async function populate_stats() {
   const response = await fetch('./data.json');
@@ -28,7 +39,7 @@ async function populate_stats() {
     name = toTitleCase(name);
     character_boxes[i].innerHTML += `
             <div class="statistics">
-                <h1>${name} Stats</h1>
+                <h1>${name}</h1>
                 <ul>
                     <li>Ninjutsu: ${character.ninjutsu}</li>
                     <li>Taijutsu: ${character.taijutsu}</li>
@@ -38,7 +49,8 @@ async function populate_stats() {
                     <li>Speeed: ${character.speed}</li>
                     <li>Stamina ${character.stamina}</li>
                     <li>Hand Seals: ${character.hand_seals}</li>
-                    <li>Total Points: ${character.total}</li>
+                    <b><li>Total Points: ${character.total}</li></b>
+                    <br>
                     <li>Notes: ${character.notes}</li>
                 </ul>
             </div>`;
@@ -53,9 +65,6 @@ function toTitleCase(word) {
   word = first_letter + word.join('');
   return word;
 }
-
-var slideIndex = 1;
-showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -74,25 +83,63 @@ function showSlides(n) {
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
   }
-
   slides[slideIndex - 1].style.display = 'flex';
 }
+
+function typeWriter() {
+  var speed = 50;
+  if (twCounter < typeWriterText.length) {
+    typeWriterElement.innerHTML += typeWriterText.charAt(twCounter);
+    twCounter++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+function displayBattleStrategy() {
+  twCounter = 0;
+  typeWriterText = `Time to cry my way to victory!`;
+  typeWriterElement = document.getElementById('battle_strategy');
+  typeWriter();
+}
+function displayAkatsukiMessage() {
+  twCounter = 0;
+  typeWriterText = `Hi, my name is Tobi`;
+  typeWriterElement = document.getElementById('battle_strategy');
+  typeWriter();
+}
+function sakuraSurprise() {
+  let box = document.createElement('div');
+  box.id = 'surprise';
+  box.className = 'sakura-surprise';
+  document.body.prepend(box);
+
+  displayBattleStrategy();
+  let rand_num = Math.floor(Math.random() * 6 + 1);
+  box.style.backgroundImage = 'url(./images/sakura-me/' + rand_num + '.jpeg)';
+  moveSakura();
+}
+
+function moveSakura() {
+  let surprise = document.getElementById('surprise');
+  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 50 + 'px';
+  pos_bottom = surprise.style.bottom;
+  pos_bottom = pos_bottom.replace('px', '');
+  console.log(pos_bottom);
+  if (pos_bottom < 1000) {
+    setTimeout(moveSakura, 500);
+  } else {
+    document.body.removeChild(document.getElementById('surprise'));
+  }
+}
+
+mode_toggle.addEventListener('click', setMode);
+showSlides(slideIndex);
 document.getElementById('next_slide').addEventListener('click', () => {
   plusSlides(1);
 });
 document.getElementById('prev_slide').addEventListener('click', () => {
   plusSlides(-1);
 });
-
-var txt = 'Welcome! This website has 3 Easter Eggs! Try and find them!';
-var speed = 50;
-let i = 0;
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById('welcome').innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
+surprise.addEventListener('click', sakuraSurprise);
 populate_stats();
 typeWriter();

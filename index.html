@@ -2,6 +2,7 @@
 
 <head>
     <title>Sakura Sucks!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./index.css">
     <script src="./index.js" defer></script>
 </head>
@@ -12,19 +13,29 @@
             <div id="welcome"></div>
         </div>
         <div class="controls">
-            <button id="mode">Join the Akatsuki</button>
-            <button>Sakura Me!</button>
+            <div>
+                <button id="mode">Join the Akatsuki</button>
+                <p></p>
+            </div>
+            <div class="battle">
+                <button id="sakura_surprise">Invoke Battle Strategy</button>
+                <p id="battle_strategy"></p>
+            </div>
+
         </div>
 
     </header>
 
     <div class="main-box">
+
         <div class="secondary-box">
             <div id="sakura" class="character">
-                <img src="./images/sakura.png" height="560">
+                <div class="sakura">
+                    <img src="./images/sakura.png" height="560">
+                </div>
             </div>
-
         </div>
+
         <div class="secondary-box">
             <p id="prev_slide" class="prev">&#10094;</p>
             <p id="next_slide" class="next">&#10095;</p>
@@ -37,8 +48,8 @@
             <div id="tsunade" class="character slide">
                 <img src="./images/tsunade.png" height="600">
             </div>
-
         </div>
+
     </div>
     <footer>
         <p>Created by <a href="https://github.com/mh-anwar">mh-anwar</a> and hosted at <a
