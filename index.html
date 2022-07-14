@@ -3,35 +3,46 @@
 <head>
     <title>Sakura Sucks!</title>
     <link rel="stylesheet" type="text/css" href="./index.css">
-
     <script src="./index.js" defer></script>
-
 </head>
 
 <body>
-
     <header>
-        <div class="main-info">
+        <div class="info">
             <p>A <i>slightly</i> biased comparision of Sakura to other Naruto characters.</p>
             <p>Created by <a href="https://github.com/mh-anwar">mh-anwar</a> and hosted at <a
                     href="https://github.com/mh-anwar/sakura-sucks">mh-anwar/sakura-sucks</a></p>
         </div>
-        <div class="main-controls">
+        <div class="controls">
             <button id="mode">Enable Dark Mode</button>
         </div>
 
     </header>
-    <div id="main_box" class="main-box">
-        <div id="sakura" class="character">
-            <img src="./images/sakura-main.png" width="500" height="600">
+
+    <div class="main-box">
+        <div class="secondary-box">
+            <div id="sakura" class="character">
+                <img src="./images/sakura-main.png" width="450" height="600">
+            </div>
+
         </div>
-        <div id="sasuke" class="character">
-            <img src="./images/sasuke-main.png" height="600">
-        </div>
-        <div id="naruto" class="character">
-            <img src="./images/naruto-main.png" height="600">
+        <div class="secondary-box">
+            <a id="prev_slide" class="prev">&#10094;</a>
+
+            <div id="sasuke" class="character slide">
+                <img src="./images/sasuke.png" height="600">
+            </div>
+            <div id="naruto" class="character slide">
+                <img src="./images/naruto.png" height="600">
+            </div>
+            <div id="tsunade" class="character slide">
+                <img src="./images/tsunade.png" height="600">
+            </div>
+
+            <a id="next_slide" class="next">&#10095;</a>
         </div>
     </div>
+
 </body>
 
 </html>

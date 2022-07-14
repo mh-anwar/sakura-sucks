@@ -8,7 +8,8 @@
     "speed": 3.5,
     "stamina": 5,
     "hand_seals": 1.5,
-    "total": 26
+    "total": 26,
+    "notes": "OP, absolute legend, better than Sakura"
   },
   "sakura": {
     "ninjutsu": 3,
@@ -19,7 +20,8 @@
     "speed": 3,
     "stamina": 2.5,
     "hand_seals": 4,
-    "total": 26
+    "total": 26,
+    "notes": "Nothing to describe"
   },
   "sasuke": {
     "ninjutsu": 5,
@@ -30,6 +32,19 @@
     "speed": 4.5,
     "stamina": 3.5,
     "hand_seals": 4,
-    "total": 31.5
+    "total": 31.5,
+    "notes": "Orders of magnitude more powerful than Sakura's crying power"
+  },
+  "tsunade": {
+    "ninjutsu": 5,
+    "taijutsu": 5,
+    "genjutsu": 3.5,
+    "intelligence": 5,
+    "strength": 5,
+    "speed": 3.5,
+    "stamina": 4,
+    "hand_seals": 4,
+    "total": 35,
+    "notes": "Scared of blood, insanely powerful, Sakura didn't inherit her true abilities"
   }
 }

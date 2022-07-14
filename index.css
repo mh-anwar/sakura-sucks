@@ -1,5 +1,9 @@
+html {
+  height: 100%;
+}
 body {
   width: 100%;
+  height: 100%;
   background-color: #babaf1;
 }
 .dark-mode {
@@ -8,6 +12,11 @@ body {
 }
 a {
   color: inherit;
+}
+img {
+  border-radius: 0.3em;
+  pointer-events: none;
+  user-select: none;
 }
 button {
   height: 5%;
@@ -20,32 +29,100 @@ header {
   align-items: center;
   justify-content: space-evenly;
 }
-.main-info {
+.info {
   width: 50%;
   display: flex;
   align-items: center;
   gap: 1%;
 }
-.main-controls {
+.controls {
   width: 50%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .main-box {
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  /*Change flex-direction if mobile*/
-  flex-wrap: wrap;
-  gap: 5%;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.secondary-box {
+  margin: 1%;
+  flex: 48%;
+  height: 100%;
 }
 
 .character {
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
+  width: inherit;
+  height: 100%;
+  flex: 100%;
+  align-items: center;
 }
 
 .statistics {
   display: flex;
   flex-direction: column;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  width: auto;
+  padding: 16px;
+  color: inherit;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Slides and Fading animation */
+.slide {
+  display: none;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-box {
+    flex-flow: column wrap;
+  }
+  .secondary-box {
+    width: 100%;
+    height: 50%;
+  }
+  .character {
+    flex-flow: column wrap;
+  }
 }
