@@ -7,12 +7,29 @@
     "strength": 3.5,
     "speed": 3.5,
     "stamina": 5,
-    "hand_seals": 1.5
+    "hand_seals": 1.5,
+    "total": 26
   },
   "sakura": {
-    "ninjutsu": 3
+    "ninjutsu": 3,
+    "taijutsu": 3,
+    "genjutsu": 3.5,
+    "intelligence": 4,
+    "strength": 3,
+    "speed": 3,
+    "stamina": 2.5,
+    "hand_seals": 4,
+    "total": 26
   },
   "sasuke": {
-    "ninjutsu": 5
+    "ninjutsu": 5,
+    "taijutsu": 3.5,
+    "genjutsu": 4,
+    "intelligence": 3.5,
+    "strength": 3.5,
+    "speed": 4.5,
+    "stamina": 3.5,
+    "hand_seals": 4,
+    "total": 31.5
   }
 }
