@@ -30,7 +30,7 @@ a {
 }
 
 img {
-  border-radius: 0.3em;
+  border-radius: 0.5em;
   pointer-events: none;
   user-select: none;
 }
@@ -63,6 +63,7 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  gap: 0;
 }
 .info {
   display: flex;
@@ -122,6 +123,11 @@ footer {
   height: 100%;
   flex: 98%;
   align-items: center;
+}
+.character img {
+  background-color: #2f0244;
+  max-width: 250px;
+  max-height: 400px;
 }
 .sakura {
   cursor: url(./images/crying.png), auto;

@@ -4,8 +4,7 @@ let surprise = document.getElementById('sakura_surprise');
 let mode = 0;
 let slideIndex = 1;
 var twCounter = 0;
-var typeWriterText =
-  'Welcome! This website compares Sakura to other characters in Naruto (Shippuden). It also has a few Easter Eggs! Try and find them!';
+var typeWriterText = `Enjoy comparing Sakura to other characters and finding Easter Eggs! (Note: this is best viewed on a PC)`;
 var typeWriterElement = document.getElementById('welcome');
 let agent = navigator.userAgent;
 if (agent.includes('Safari')) {
@@ -120,7 +119,7 @@ function typeWriter() {
     typeWriterElement.innerHTML = '';
   }
   if (twCounter < typeWriterText.length) {
-    typeWriterElement.innerHTML += typeWriterText.charAt(twCounter);
+    typeWriterElement.append(typeWriterText.charAt(twCounter));
     twCounter++;
     setTimeout(typeWriter, speed);
   }
