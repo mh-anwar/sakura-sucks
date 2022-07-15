@@ -53,11 +53,11 @@ async function populate_stats() {
                 <br>
                 <li>Notes: ${character.notes}</li>
                 <br>
-                <li>Giant Forehead</li>
-                <li>Minute Brain</li>
-                <li>Knows One Jutsu: 泣く柔術 (Crying no Jutsu)</li>
-                <li>Seems Like Failure</li>
-                <li>Looks Like Failure</li>
+                <li>Giant Forehead ✅</li>
+                <li>Minute Brain ✅</li>
+                <li>Knows One Jutsu: 泣く柔術 (Crying no Jutsu) ✅</li>
+                <li>Seems Like Failure ✅</li>
+                <li>Looks Like Failure ✅</li>
                 <li>Failure</li>
             </ul>
       </div>`;
