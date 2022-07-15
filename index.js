@@ -17,12 +17,10 @@ if (agent.includes('Safari')) {
 function setMode() {
   if (mode == 0) {
     document.body.style.backgroundImage = 'url(./images/akatsuki.jpg)';
-    displayAkatsukiMessage(`Hi, my name is Tobi!`);
     mode_toggle.textContent = 'Enable Wight Mode';
     mode = 1;
   } else {
     document.body.style.backgroundImage = '';
-    displayAkatsukiMessage(`Leaving so soon??`);
     mode_toggle.textContent = 'Join the Akatsuki';
     mode = 0;
   }
@@ -99,33 +97,21 @@ function typeWriter() {
   }
 }
 
-function displayBattleStrategy() {
-  twCounter = 0;
-  typeWriterText = `Time to cry my way to victory!`;
-  typeWriterElement = document.getElementById('battle_strategy');
-  typeWriter();
-}
-function displayAkatsukiMessage(message) {
-  twCounter = 0;
-  typeWriterText = message;
-  typeWriterElement = document.getElementById('akatsuki_message');
-  typeWriter();
-}
 function sakuraSurprise() {
   let box = document.createElement('div');
   box.id = 'surprise';
   box.className = 'sakura-surprise';
   document.body.prepend(box);
 
-  displayBattleStrategy();
   let rand_num = Math.floor(Math.random() * 8 + 1);
   box.style.backgroundImage = 'url(./images/sakura-me/' + rand_num + '.jpeg)';
+  showSnackbar();
   moveSakura();
 }
 
 function moveSakura() {
   let surprise = document.getElementById('surprise');
-  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 50 + 'px';
+  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 100 + 'px';
   pos_bottom = surprise.style.bottom;
   pos_bottom = pos_bottom.replace('px', '');
   console.log(pos_bottom);
@@ -134,6 +120,14 @@ function moveSakura() {
   } else {
     document.body.removeChild(document.getElementById('surprise'));
   }
+}
+
+function showSnackbar() {
+  let snackbar = document.getElementById('snackbar');
+  snackbar.className = 'show';
+  setTimeout(function () {
+    snackbar.className = snackbar.className.replace('show', '');
+  }, 3000);
 }
 
 mode_toggle.addEventListener('click', setMode);
@@ -147,3 +141,6 @@ document.getElementById('prev_slide').addEventListener('click', () => {
 surprise.addEventListener('click', sakuraSurprise);
 populate_stats();
 typeWriter();
+document.onkeypress = function (e) {
+  document.getElementById('title_input').set;
+};
