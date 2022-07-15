@@ -1,9 +1,9 @@
 html {
   height: 100%;
-  width: 100%;
+  width: 90vw;
 }
 body {
-  width: 100%;
+  width: 100vw;
   height: 100%;
   margin: none;
   background-color: #480468;
@@ -45,17 +45,18 @@ button {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 footer {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .title {
   display: flex;
@@ -98,7 +99,7 @@ footer {
 }
 
 .main-box {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
@@ -247,7 +248,7 @@ footer {
   }
 
   .secondary-box {
-    width: 100%;
+    width: 100vw;
     height: 50%;
   }
   .character {
