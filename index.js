@@ -58,7 +58,7 @@ async function populate_stats() {
                 <li>Knows One Jutsu: 泣く柔術 (Crying no Jutsu) ✅</li>
                 <li>Seems Like Failure ✅</li>
                 <li>Looks Like Failure ✅</li>
-                <li>Failure</li>
+                <li>Is Failure ✅</li>
             </ul>
       </div>`;
     } else {
@@ -138,7 +138,7 @@ function sakuraSurprise() {
 
 function moveSakura() {
   let surprise = document.getElementById('surprise');
-  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 80 + 'px';
+  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 75 + 'px';
   pos_bottom = surprise.style.bottom;
   pos_bottom = pos_bottom.replace('px', '');
   if (pos_bottom < 1000) {
