@@ -29,7 +29,6 @@ async function populate_stats() {
   const response = await fetch('./data.json');
   const json = await response.json();
   data = json;
-  console.log(data);
   for (let i = 0; i < character_boxes.length; i++) {
     //Naming the variable 'name' is not the _best_ idea
     let name = character_boxes[i].id;
@@ -142,7 +141,6 @@ function moveSakura() {
   surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 100 + 'px';
   pos_bottom = surprise.style.bottom;
   pos_bottom = pos_bottom.replace('px', '');
-  console.log(pos_bottom);
   if (pos_bottom < 1000) {
     setTimeout(moveSakura, 500);
   } else {
