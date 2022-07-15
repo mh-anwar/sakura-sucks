@@ -21,7 +21,7 @@
     "stamina": 2.5,
     "hand_seals": 4,
     "total": 26,
-    "notes": "Nothing to describe"
+    "notes": "What is there to describe?"
   },
   "sasuke": {
     "ninjutsu": 5,
@@ -57,7 +57,7 @@
     "stamina": 2,
     "hand_seals": 3,
     "total": "21.5",
-    "notes": "Legend. Doesn't have more points that Sakura but still way better."
+    "notes": "Legend. Doesn't have more points than Sakura but still way better"
   },
   "ino": {
     "ninjutsu": 3.5,
@@ -69,6 +69,6 @@
     "stamina": 2.5,
     "hand_seals": 2.5,
     "total": 21,
-    "notes": "Better than Sakura, doesn't have an enormous forehead, can do interested Jutsu's."
+    "notes": "Better than Sakura, doesn't have an enormous forehead, can do interesting Jutsu's"
   }
 }

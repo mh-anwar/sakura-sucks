@@ -138,7 +138,7 @@ function sakuraSurprise() {
 
 function moveSakura() {
   let surprise = document.getElementById('surprise');
-  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 100 + 'px';
+  surprise.style.bottom = parseFloat(surprise.style.bottom || 0) + 80 + 'px';
   pos_bottom = surprise.style.bottom;
   pos_bottom = pos_bottom.replace('px', '');
   if (pos_bottom < 1000) {

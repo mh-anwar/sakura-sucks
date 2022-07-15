@@ -100,7 +100,7 @@ footer {
 .sakura-surprise {
   position: fixed;
   bottom: 0;
-  left: 20;
+  left: 20%;
   width: 600px;
   height: 400px;
   z-index: 100;
@@ -258,6 +258,9 @@ footer {
   .secondary-box {
     width: 100vw;
     height: 50%;
+  }
+  .sakura-surprise {
+    left: 0;
   }
   .character {
     flex-flow: column wrap;
