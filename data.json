@@ -46,5 +46,29 @@
     "hand_seals": 4,
     "total": 35,
     "notes": "Scared of blood, insanely powerful, Sakura didn't inherit her true abilities"
+  },
+  "hinata": {
+    "ninjutsu": 3,
+    "taijutsu": 3.5,
+    "genjutsu": 2.5,
+    "intelligence": 3.5,
+    "strength": 1.5,
+    "speed": 2.5,
+    "stamina": 2,
+    "hand_seals": 3,
+    "total": "21.5",
+    "notes": "Legend. Doesn't have more points that Sakura but still way better."
+  },
+  "ino": {
+    "ninjutsu": 3.5,
+    "taijutsu": 1.5,
+    "genjutsu": 3,
+    "intelligence": 3,
+    "strength": 2.5,
+    "speed": 2.5,
+    "stamina": 2.5,
+    "hand_seals": 2.5,
+    "total": 21,
+    "notes": "Better than Sakura, doesn't have an enormous forehead, can do interested Jutsu's."
   }
 }

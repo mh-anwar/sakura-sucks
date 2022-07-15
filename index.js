@@ -36,7 +36,35 @@ async function populate_stats() {
     let name = character_boxes[i].id;
     character = data[name];
     name = toTitleCase(name);
-    character_boxes[i].innerHTML += `
+    //Hardcoded for now
+    if (name == 'Sakura') {
+      character_boxes[i].innerHTML += `
+   
+      <div class="statistics">
+            <h1>${name}</h1>
+            <ul>
+                <li>Ninjutsu: ${character.ninjutsu}</li>
+                <li>Taijutsu: ${character.taijutsu}</li>
+                <li>Genjutsu: ${character.genjutsu} </li>
+                <li>Intelligence: ${character.intelligence}</li>
+                <li>Strength: ${character.strength}</li>
+                <li>Speeed: ${character.speed}</li>
+                <li>Stamina ${character.stamina}</li>
+                <li>Hand Seals: ${character.hand_seals}</li>
+                <b><li>Total Points: ${character.total}</li></b>
+                <br>
+                <li>Notes: ${character.notes}</li>
+                <br>
+                <li>Giant Forehead</li>
+                <li>Minute Brain</li>
+                <li>Knows One Jutsu: 泣く柔術 (Crying no Jutsu)</li>
+                <li>Seems Like Failure</li>
+                <li>Looks Like Failure</li>
+                <li>Failure</li>
+            </ul>
+      </div>`;
+    } else {
+      character_boxes[i].innerHTML += `
             <div class="statistics">
                 <h1>${name}</h1>
                 <ul>
@@ -53,6 +81,7 @@ async function populate_stats() {
                     <li>Notes: ${character.notes}</li>
                 </ul>
             </div>`;
+    }
   }
 }
 
