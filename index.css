@@ -14,15 +14,16 @@ body {
 h1 {
   text-align: center;
   font-size: xx-large;
-  flex: 50%;
 }
 input[type='text'] {
   background-color: inherit;
   color: inherit;
-  border: none;
+  border: 0.5px none wheat;
+  border-radius: 0.3em;
   outline: none;
   font-size: xx-large;
-  flex: 50%;
+  width: 20%;
+  text-align: center;
 }
 a {
   color: inherit;
@@ -44,28 +45,31 @@ button {
 }
 
 header {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
 }
+
 footer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .title {
   display: flex;
   flex-direction: row;
-  gap: 0.3em;
+  align-items: center;
 }
 .info {
-  flex: 50%;
   display: flex;
   align-items: center;
   gap: 1%;
+  text-align: center;
 }
 
 .controls {
-  flex: 50%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,7 +118,7 @@ footer {
   display: flex;
   flex-flow: row;
   height: 100%;
-  flex: 100%;
+  flex: 98%;
   align-items: center;
 }
 .sakura {
@@ -140,8 +144,7 @@ footer {
 }
 /* Position the "next button" to the right */
 .next {
-  position: fixed;
-  right: 0;
+  align-self: center;
   border-radius: 3px 0 0 3px;
 }
 
